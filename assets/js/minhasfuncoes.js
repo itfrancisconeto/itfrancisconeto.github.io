@@ -1,7 +1,8 @@
 window.addEventListener('load', start);
 
 function start() {
-saudacao();    
+saudacao();
+zoomImg();    
 }
 
 function saudacao() {
@@ -16,4 +17,9 @@ function saudacao() {
     } else if (hora >= 19 && hora <= 23){
         lblGood.innerHTML = 'Boa noite! '; 
     }
+}
+
+function zoomImg() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
 }
